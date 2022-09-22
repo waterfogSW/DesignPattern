@@ -1,15 +1,12 @@
 package strategyPattern.domain.duck;
 
-import strategyPattern.domain.flyBehavior.FlyBehavior;
-import strategyPattern.domain.quackBehavior.QuackBehavior;
+import strategyPattern.domain.flyBehavior.FlyNoWay;
+import strategyPattern.domain.quackBehavior.MuteQuack;
 
 public class DecoyDuck extends Duck {
 
-  public DecoyDuck(
-      FlyBehavior flyBehavior,
-      QuackBehavior quackBehavior
-  ) {
-    super(flyBehavior, quackBehavior);
+  public DecoyDuck() {
+    super(new FlyNoWay(), new MuteQuack());
   }
 
   @Override

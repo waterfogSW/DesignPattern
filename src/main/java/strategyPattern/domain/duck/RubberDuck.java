@@ -1,15 +1,12 @@
 package strategyPattern.domain.duck;
 
-import strategyPattern.domain.flyBehavior.FlyBehavior;
-import strategyPattern.domain.quackBehavior.QuackBehavior;
+import strategyPattern.domain.flyBehavior.FlyNoWay;
+import strategyPattern.domain.quackBehavior.Quack;
 
 public class RubberDuck extends Duck {
 
-  public RubberDuck(
-      FlyBehavior flyBehavior,
-      QuackBehavior quackBehavior
-  ) {
-    super(flyBehavior, quackBehavior);
+  public RubberDuck() {
+    super(new FlyNoWay(), new Quack());
   }
 
   @Override

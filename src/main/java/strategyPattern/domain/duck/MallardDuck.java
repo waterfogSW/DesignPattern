@@ -1,15 +1,12 @@
 package strategyPattern.domain.duck;
 
-import strategyPattern.domain.flyBehavior.FlyBehavior;
-import strategyPattern.domain.quackBehavior.QuackBehavior;
+import strategyPattern.domain.flyBehavior.FlyWithWings;
+import strategyPattern.domain.quackBehavior.Quack;
 
 public class MallardDuck extends Duck {
 
-  public MallardDuck(
-      FlyBehavior flyBehavior,
-      QuackBehavior quackBehavior
-  ) {
-    super(flyBehavior, quackBehavior);
+  public MallardDuck() {
+    super(new FlyWithWings(), new Quack());
   }
 
   public void display() {

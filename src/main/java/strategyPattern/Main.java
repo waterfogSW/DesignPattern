@@ -15,25 +15,25 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Duck mallard = new MallardDuck(new FlyWithWings(), new Quack());
+    Duck mallard = new MallardDuck();
     mallard.display();
     mallard.quack();
     mallard.fly();
     mallard.swim();
 
-    Duck redHead = new RedHeadDuck(new FlyWithWings(), new Squeak());
+    Duck redHead = new RedHeadDuck();
     redHead.display();
     redHead.quack();
     redHead.fly();
     redHead.swim();
 
-    Duck rubberDuck = new RubberDuck(new FlyNoWay(), new Quack());
+    Duck rubberDuck = new RubberDuck();
     rubberDuck.display();
     rubberDuck.quack();
     rubberDuck.fly();
     rubberDuck.swim();
 
-    Duck decoyDuck = new DecoyDuck(new FlyNoWay(), new MuteQuack());
+    Duck decoyDuck = new DecoyDuck();
     decoyDuck.display();
     decoyDuck.quack();
     decoyDuck.fly();
