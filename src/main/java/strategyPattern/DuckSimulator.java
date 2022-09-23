@@ -3,6 +3,7 @@ package strategyPattern;
 import strategyPattern.domain.duck.DecoyDuck;
 import strategyPattern.domain.duck.Duck;
 import strategyPattern.domain.duck.MallardDuck;
+import strategyPattern.domain.duck.ModelDuck;
 import strategyPattern.domain.duck.RubberDuck;
 
 public class DuckSimulator {
@@ -12,6 +13,7 @@ public class DuckSimulator {
     Duck mallard = new MallardDuck();
     Duck decoyDuck = new DecoyDuck();
     Duck rubberDuck = new RubberDuck();
+    Duck modelDuck = new ModelDuck();
 
     mallard.display();
     mallard.fly();
@@ -27,6 +29,11 @@ public class DuckSimulator {
     decoyDuck.fly();
     decoyDuck.quack();
     decoyDuck.swim();
+
+    modelDuck.display();
+    modelDuck.fly();
+    modelDuck.quack();
+    modelDuck.swim();
 
   }
 
