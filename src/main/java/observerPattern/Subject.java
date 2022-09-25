@@ -2,9 +2,9 @@ package observerPattern;
 
 public interface Subject {
 
-  void registerObserver(Observer observer);
+  void attach(Observer observer);
 
-  void removeObserver(Observer observer);
+  void detach(Observer observer);
 
   void notifyObservers();
 
