@@ -1,14 +1,12 @@
 package observerPattern.dataobject;
 
-import observerPattern.dataobject.DataObject;
-
 public class WeatherData extends DataObject {
 
   private float temperature;
   private float humidity;
   private float pressure;
 
-  private void measurementsChanged() {
+  public void measurementsChanged() {
     notifyObservers();
   }
 

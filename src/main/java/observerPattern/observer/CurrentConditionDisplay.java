@@ -1,22 +1,28 @@
 package observerPattern.observer;
 
-import observerPattern.dataobject.DataObject;
+import observerPattern.dataobject.WeatherData;
 
 public class CurrentConditionDisplay implements DisplayObserver {
 
-  private final DataObject weatherData;
+  private final WeatherData weatherData;
 
-  public CurrentConditionDisplay(DataObject weatherData) {
+  public CurrentConditionDisplay(WeatherData weatherData) {
     this.weatherData = weatherData;
   }
 
   @Override
   public void update() {
-    ccDisplay();
+    float temperature = weatherData.getTemperature();
+    float humidity = weatherData.getHumidity();
+    ccDisplay(temperature, humidity);
   }
 
-  private void ccDisplay() {
-    System.out.println("I am Current Condition Display");
+  private void ccDisplay(
+      float temperature,
+      float humidity
+  ) {
+    System.out.println(
+        "Current Conditions : " + temperature + "C Degree and " + humidity + "% Humidity");
   }
 
 }

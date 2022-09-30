@@ -18,8 +18,8 @@ public class Main {
     weatherData.attach(forecastDisplay);
     weatherData.attach(statisticDisplay);
 
-    weatherData.setHumidity(10);
-    weatherData.setPressure(10);
-    weatherData.setTemperature(10);
+    weatherData.setMeasurements(10.5f, 10, 100);
+    weatherData.setMeasurements(18.5f, 20, 90);
+    weatherData.setMeasurements(15.2f, 30, 100);
   }
 }
