@@ -21,21 +21,6 @@ public class WeatherData extends DataObject {
     measurementsChanged();
   }
 
-  public void setTemperature(float temperature) {
-    this.temperature = temperature;
-    measurementsChanged();
-  }
-
-  public void setPressure(float pressure) {
-    this.pressure = pressure;
-    measurementsChanged();
-  }
-
-  public void setHumidity(float humidity) {
-    this.humidity = humidity;
-    measurementsChanged();
-  }
-
   public float getTemperature() {
     return temperature;
   }

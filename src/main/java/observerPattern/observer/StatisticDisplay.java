@@ -18,11 +18,7 @@ public class StatisticDisplay implements DisplayObserver {
 
   @Override
   public void update() {
-
-    sDisplay(weatherData.getTemperature());
-  }
-
-  private void sDisplay(float temperature) {
+    float temperature = weatherData.getTemperature();
     tempSum += temperature;
     numReadings++;
 
@@ -34,8 +30,11 @@ public class StatisticDisplay implements DisplayObserver {
       minTemp = temperature;
     }
 
-    System.out.println("Avg / Max / Min : " + (tempSum / numReadings) + " / " + maxTemp + " / " + minTemp);
+    display();
+  }
 
+  public void display() {
+    System.out.println("Avg / Max / Min : " + (tempSum / numReadings) + " / " + maxTemp + " / " + minTemp);
   }
 
 }

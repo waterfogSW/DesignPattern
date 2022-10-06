@@ -8,11 +8,11 @@ import observerPattern.observer.StatisticDisplay;
 public class Main {
 
   public static void main(String[] args) {
-    WeatherData weatherData = new WeatherData();
+    final var weatherData = new WeatherData();
 
-    CurrentConditionDisplay currentConditionDisplay = new CurrentConditionDisplay(weatherData);
-    ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
-    StatisticDisplay statisticDisplay = new StatisticDisplay(weatherData);
+    final var currentConditionDisplay = new CurrentConditionDisplay(weatherData);
+    final var forecastDisplay = new ForecastDisplay(weatherData);
+    final var statisticDisplay = new StatisticDisplay(weatherData);
 
     weatherData.attach(currentConditionDisplay);
     weatherData.attach(forecastDisplay);

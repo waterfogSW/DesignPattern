@@ -14,6 +14,12 @@ public class ForecastDisplay implements DisplayObserver {
 
   @Override
   public void update() {
+    display();
+    this.lastPressure = weatherData.getPressure();
+  }
+
+  @Override
+  public void display() {
     float currentPressure = weatherData.getPressure();
 
     System.out.print("Forcast : ");
@@ -24,10 +30,6 @@ public class ForecastDisplay implements DisplayObserver {
     } else {
       System.out.println("same");
     }
-  }
-
-  private void fDisplay() {
-    System.out.println("I am Forcast Display");
   }
 
 }

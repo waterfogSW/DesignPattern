@@ -4,6 +4,8 @@ import observerPattern.dataobject.WeatherData;
 
 public class CurrentConditionDisplay implements DisplayObserver {
 
+  private float temperature;
+  private float humidity;
   private final WeatherData weatherData;
 
   public CurrentConditionDisplay(WeatherData weatherData) {
@@ -12,17 +14,15 @@ public class CurrentConditionDisplay implements DisplayObserver {
 
   @Override
   public void update() {
-    float temperature = weatherData.getTemperature();
-    float humidity = weatherData.getHumidity();
-    ccDisplay(temperature, humidity);
+    this.temperature = weatherData.getTemperature();
+    this.humidity = weatherData.getHumidity();
+    display();
   }
 
-  private void ccDisplay(
-      float temperature,
-      float humidity
-  ) {
+  @Override
+  public void display() {
     System.out.println(
-        "Current Conditions : " + temperature + "C Degree and " + humidity + "% Humidity");
+        "Current Conditions: " + temperature + "F degrees and " + humidity + "% humidity");
   }
 
 }
