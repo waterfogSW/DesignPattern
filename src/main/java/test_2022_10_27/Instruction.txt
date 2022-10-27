@@ -1,0 +1,24 @@
+Abstract Factory Pattern 실습
+   > 주어진 코드를 실행시켜 그 결과를 캡쳐하여 제출문서에 저장한다.
+1. 4가지 Pizza; Clam Pizza, Cheese Pizza, Pepperoni Pizza, Veggie Pizza를 생산하는 
+   PizzaFactory Class를 만들어라. 통일을 위해 PizzaFactory Class에는 Clam Pizza생산을 위해 getClamPizza(),
+   Cheese Pizza생산을 위해 getCheesePizza(), Pepperoni Pizza생산을 위해 getPepperoniPizza(),
+   Veggie Pizza생산을 위해 getVeggiePizza() method를 가진다.
+2. PizzaFactory를 상속받아 NYPizzaFactory Class를 만들어라. NYPizzaFactory의 getClamPizza()에서는
+   NYStyleClamPizza객체를 생산하여 돌려주고 getCheesePizza()에서는 NYStyleCheesePizza객체를,
+   getPepperoniPizza()에서는 NYStylePepperoniPizza객체를, getVeggiePizza()에서는 NYStyleVeggiePizza를
+   생성하여 돌려준다.
+3. 2번과 유사한 방법으로 ChicagoPizzaFactory를 만들어라.
+4. 2번, 3번과 유사한 방법으로 MyPizzaFactory를 만들어라.
+5. MyPizzaStore.java에 PizzaFactory객체를 가지는 Attribute "pizzaFactory"를 만들고 Constructor에서 
+   MyPizzaFactory 객체를 생성하여 pizzaFactory에 할당한다.
+6. createPizza() method의 각 Pizza object instance 생성(new)을 Factory의 getInstance()로 모두 바꾸어라;
+   예를 들어 new ClamPizza()를 pizzaFactory.getClamPizza()로 바꾼다.
+7. MyPizzaStore의 생성자를 PizzaFactory객체를 매개변수로 받을 수 있도록 변경하라. 매개변수로 받은 PizzaFactory객체로
+   pizzaFactory attribute를 설정하라.
+8. main()에서 MyPizzaStore객체를 생성할 때 MyPizzaFactory객체를 매개변수로 전달하여 수행결과를 확인한다.
+   > 수행결과를 캡쳐하여 제출문서에 저장한다.
+9. PizzaFactory 객체를 NYPizzaFactory로 바꾸고 ChicagoPizzaFactory로 바꾸면서 전달하면서 수행결과를 확인한다.
+   > 각 수행결과를 캡쳐하여 제출문서에 저장한다.
+   > PizzaFactory.java, NYPizzaFactory.java, ChicagoPizzaFactory.java, 그리고 MyPizzaStore.java를
+     제출문서에 넣고 PDF파일로 변환하여 제출한다.
