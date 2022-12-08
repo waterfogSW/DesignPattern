@@ -3,6 +3,7 @@ package factoryMethod.pizza;
 import java.util.ArrayList;
 
 abstract public class Pizza {
+
   protected String name;
   protected String dough;
   protected String sauce;
@@ -30,13 +31,18 @@ abstract public class Pizza {
 
   public String toString() {
     // code to display pizza name and ingredients
-    StringBuffer display = new StringBuffer();
-    display.append("---- " + name + " ----\n");
-    display.append(dough + "\n");
-    display.append(sauce + "\n");
+    StringBuilder display = new StringBuilder();
+    display.append("---- ")
+           .append(name)
+           .append(" ----\n")
+           .append(dough)
+           .append("\n")
+           .append(sauce)
+           .append("\n");
     for (String topping : toppings) {
       display.append(topping + "\n");
     }
     return display.toString();
   }
+
 }

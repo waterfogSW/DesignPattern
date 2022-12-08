@@ -24,8 +24,8 @@ public class Composite implements Component {
   }
 
   @Override
-  public void operation() {
-    System.out.println("I am composite");
+  public void display() {
+    components.forEach(Component::display);
   }
 
 }

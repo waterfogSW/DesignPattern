@@ -1,10 +1,10 @@
 package composite;
 
-public class Leaf implements Component{
+public class Leaf implements Component {
 
   @Override
-  public void operation() {
-    System.out.println("I am leaf");
+  public void display() {
+    System.out.println("hello world");
   }
 
 }
