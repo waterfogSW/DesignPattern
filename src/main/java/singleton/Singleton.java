@@ -4,13 +4,19 @@ public class Singleton implements AddComponent {
 
   private static Singleton instance;
 
-  protected Singleton() {}
+  private Singleton() {}
 
   public static Singleton getInstance() {
-    if (instance == null) {
-      return instance = new Singleton();
+    Singleton result = instance;
+    if (result != null) {
+      return result;
     }
-    return instance;
+    synchronized (Singleton.class) {
+      if (instance == null) {
+        instance = new Singleton();
+      }
+      return instance;
+    }
   }
 
   @Override

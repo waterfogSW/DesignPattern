@@ -2,7 +2,7 @@ package singleton;
 
 public class ChocolateBoiler {
 
-  private static ChocolateBoiler instance;
+  private static volatile ChocolateBoiler instance;
 
   private boolean empty;
   private boolean boiled;
@@ -13,7 +13,7 @@ public class ChocolateBoiler {
     System.out.println(this);
   }
 
-  public static ChocolateBoiler getInstance() {
+  public static synchronized ChocolateBoiler getInstance() {
     if (instance == null) {
       return instance = new ChocolateBoiler();
     }
